@@ -124,10 +124,3 @@ last:
 	fclose( fh );
 	return success;
 }
-
-void bpn_free( Network *network ) {
-	if( network->storage ) {
-		free( network->storage );
-		network->storage = 0;
-	}
-}

@@ -591,3 +591,10 @@ void bpn_copy_data_out( Network *network, View *view, char *buffer ) {
 		}
 	}
 }
+
+void bpn_free( Network *network ) {
+	if( network->storage ) {
+		free( network->storage );
+		network->storage = 0;
+	}
+}
